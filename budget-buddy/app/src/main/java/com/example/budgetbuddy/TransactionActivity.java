@@ -59,7 +59,7 @@ public class TransactionActivity extends AppCompatActivity
     String description = descriptionText.getText().toString();
 
 
-    updTransactionHistory = transactionHistory + "|" + month + "/" + day + "/" + year + "/" + ":" + cost + ":" +category + ":" + description;
+    updTransactionHistory = transactionHistory + "|" + month + "/" + day + "/" + year + ", " + ":" + cost + ", :" +category + ", :" + description;
     userData.set(7, updTransactionHistory);
     accounts.replace(username, userData);
 
