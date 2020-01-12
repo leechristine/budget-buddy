@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
   public void login(View view) {
     boolean loginSuccess = false;
 
-    EditText nameText = (EditText) findViewById(R.id.name_field);
+    EditText nameText = (EditText) findViewById(R.id.username_field);
     String username = nameText.getText().toString();
 
     EditText passwordText = (EditText) findViewById(R.id.password_field);

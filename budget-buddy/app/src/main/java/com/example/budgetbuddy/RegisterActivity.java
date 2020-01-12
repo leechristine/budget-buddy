@@ -26,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     ArrayList<String> newAccount = new ArrayList<String>();
 
-    EditText nameText = (EditText) findViewById(R.id.name_field);
+    EditText nameText = (EditText) findViewById(R.id.username_field);
     String username = nameText.getText().toString();
     newAccount.add(username);
 
@@ -40,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
     //        String value = budgetText.getText().toString();
     //        budget  = Float.parseFloat(value);
 
-    EditText goalText = (EditText) findViewById(R.id.goal_field);
+    EditText goalText = (EditText) findViewById(R.id.goal_amount_field);
     String goal = goalText.getText().toString();
     newAccount.add(goal);
 

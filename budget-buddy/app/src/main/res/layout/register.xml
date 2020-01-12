@@ -1,54 +1,87 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
 
-        <EditText
-            android:id="@+id/name_field"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:hint="Name"
-            android:inputType="textMultiLine" />
+    <EditText
+        android:id="@+id/goal_purpose_field"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:hint="Budgeting Goal"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="397dp" />
 
-        <EditText
-            android:id="@+id/password_field"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:hint="Password"
-            android:inputType="textMultiLine" />
+    <EditText
+        android:id="@+id/goal_date_field"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:hint="Budgeting Goal"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="334dp" />
 
-        <EditText
-            android:id="@+id/budget_field"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:hint="Monthly Budget"
-            android:inputType="textMultiLine" />
+    <EditText
+        android:id="@+id/name_field"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="82dp" />
 
-        <EditText
-            android:id="@+id/goal_field"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:hint="Budgeting Goal"
-            android:inputType="textMultiLine" />
+    <EditText
+        android:id="@+id/goal_amount_field"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:hint="Budgeting Goal"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="267dp" />
 
-        <Button
-            android:id="@+id/create_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="createAccount"
-            android:text="CREATE ACCOUNT" />
+    <EditText
+        android:id="@+id/budget_field"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:hint="Monthly Budget"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <EditText
+        android:id="@+id/password_field"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="145dp" />
+
+    <EditText
+        android:id="@+id/username_field"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/create_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="createAccount"
+        android:text="CREATE ACCOUNT"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="640dp" />
 
 
-    </LinearLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
