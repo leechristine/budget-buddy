@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionActivity">
+
+    <EditText
+        android:id="@+id/month_field"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:hint="mm"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/day_field"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:hint="dd"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="82dp" />
+
+    <EditText
+        android:id="@+id/year_field"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:hint="yyyy"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="145dp" />
+
+    <EditText
+        android:id="@+id/cost_field"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:hint="Cost"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <Spinner
+        android:id="@+id/category_options"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <EditText
+        android:id="@+id/description_field"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:hint="Budgeting Goal"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="334dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
