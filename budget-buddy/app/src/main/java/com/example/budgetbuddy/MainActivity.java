@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     Intent intent = new Intent(this, NewBuddyActivity.class);
     intent.putExtra("username", username);
     startActivity(intent);
+    finish();
+    overridePendingTransition(0, 0);
   }
 
   public void logOut(View view) {

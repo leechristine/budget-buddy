@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Hashtable;
+
 public class NewBuddyActivity extends AppCompatActivity {
 
   String username = null;
@@ -25,7 +27,9 @@ public class NewBuddyActivity extends AppCompatActivity {
     String buddyUserName = buddyText.getText().toString();
 
     TextView addBuddy = (TextView) findViewById(R.id.buddy_status);
-    if (LoginActivity.accounts.get(buddyUserName) != null) {
+    if (username.equals(buddyUserName)) {
+      addBuddy.setText("You can't add yourself as a buddy!");
+    } else if (((Hashtable) LoginActivity.accounts).containsKey(buddyUserName)) {
       addBuddy.setText("You are now " + buddyUserName + "'s Buddy!");
     } else {
       addBuddy.setText("Buddy not found! Please enter a new username.");
@@ -36,6 +40,8 @@ public class NewBuddyActivity extends AppCompatActivity {
     Intent intent = new Intent(this, MainActivity.class);
     intent.putExtra("username", username);
     startActivity(intent);
+    finish();
+    overridePendingTransition(0, 0);
   }
 
   public void logOut(View view) {
