@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Budget Buddy</string>
+
+    <string-array name="categories">
+        <item>Food</item>
+        <item>Drink</item>
+        <item>Transport</item>
+        <item>Shopping</item>
+        <item>Entertainment</item>
+        <item>Housing</item>
+        <item>Digital</item>
+        <item>Medical</item>
+        <item>Misc.</item>
+    </string-array>
 </resources>

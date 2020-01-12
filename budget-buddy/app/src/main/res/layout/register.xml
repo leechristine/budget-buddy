@@ -8,24 +8,32 @@
 
 
     <EditText
-        android:id="@+id/goal_purpose_field"
+        android:id="@+id/username_field"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:hint="Budgeting Goal"
+        android:hint="Username"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="397dp" />
+        tools:layout_editor_absoluteY="145dp" />
 
     <EditText
-        android:id="@+id/goal_date_field"
+        android:id="@+id/goal_amount_field"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:hint="Budgeting Goal"
         android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="334dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <EditText
+        android:id="@+id/budget_field"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:hint="Monthly Budget"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="335dp" />
 
     <EditText
         android:id="@+id/name_field"
@@ -35,25 +43,7 @@
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="82dp" />
-
-    <EditText
-        android:id="@+id/goal_amount_field"
-        android:layout_width="379dp"
-        android:layout_height="wrap_content"
-        android:hint="Budgeting Goal"
-        android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="267dp" />
-
-    <EditText
-        android:id="@+id/budget_field"
-        android:layout_width="379dp"
-        android:layout_height="wrap_content"
-        android:hint="Monthly Budget"
-        android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="206dp" />
+        tools:layout_editor_absoluteY="211dp" />
 
     <EditText
         android:id="@+id/password_field"
@@ -63,16 +53,27 @@
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="145dp" />
+        tools:layout_editor_absoluteY="274dp" />
 
     <EditText
-        android:id="@+id/username_field"
+        android:id="@+id/goal_purpose_field"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:hint="Username"
+        android:hint="Budgeting Goal"
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="526dp" />
+
+    <EditText
+        android:id="@+id/goal_date_field"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:hint="Budgeting Goal"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="463dp" />
 
     <Button
         android:id="@+id/create_button"
@@ -82,6 +83,18 @@
         android:text="CREATE ACCOUNT"
         tools:layout_editor_absoluteX="132dp"
         tools:layout_editor_absoluteY="640dp" />
+
+    <TextView
+        android:id="@+id/text_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Profile"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="37dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
