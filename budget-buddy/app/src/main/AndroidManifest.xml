@@ -19,6 +19,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".TransactionActivity" />
+        <activity android:name=".NewBuddyActivity" />
     </application>
 
 </manifest>
