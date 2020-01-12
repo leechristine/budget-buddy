@@ -30,14 +30,12 @@ public class MainActivity extends AppCompatActivity {
     public String currentTransactionHistory() {
         ArrayList<String> userData = accounts.get(username);
         String transactionHistory = userData.get(7);
-        String[] userDataArray = line.split("|");
-        String history = "";
-        StringBuilder sb = new StringBuilder();
-        for (int i=0; i<userDataArray.size(); i++){
-            String[] transactionDataArray = line.split(":");
-            history= sb.append(transactionDataArray[0]).append(transactionDataArray[1]).append(transactionDataArray[2]).append(transactionDataArray[3]).append("\n")toString();
+        String[] userDataArray = transactionHistory.split("|");
+        String history;
+        for (int i=0; i<userDataArray.length(); i++){
+            String[] transactionDataArray = userDataArray[i].split(":");
+            history=transactionDataArray[0]+transactionDataArray[1]+transactionDataArray[2]+transactionDataArray[3]+"\n";
         }
-
         return history;
     }
 }
