@@ -7,7 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
-public class TransactionActivity extends AppCompatActivity
+public class NewBuddyActivity extends AppCompatActivity
     implements AdapterView.OnItemSelectedListener {
 
   @Override
