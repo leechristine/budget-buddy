@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="40dp"
-        android:text="Hi Name!"
+        android:text="Hi Buddy!"
         android:textColor="@color/colorWhite"
         android:textSize="34sp"
         android:textStyle="bold"

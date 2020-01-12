@@ -20,9 +20,15 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    TextView transactionHistory = (TextView) findViewById(R.id.transaction_history);
     ArrayList<String> userData = LoginActivity.accounts.get(username);
+
+    // Set all recorded transactions.
+    TextView transactionHistory = (TextView) findViewById(R.id.transaction_history);
     transactionHistory.setText(userData.get(7));
+
+    // Set name of user in greeting.
+    TextView nameGreeting = (TextView) findViewById(R.id.text_hi);
+    nameGreeting.setText("Hi " + userData.get(1) + "!");
   }
 
   public void goToTransaction(View view) {
