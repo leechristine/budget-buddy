@@ -44,7 +44,6 @@ public class LoginActivity extends AppCompatActivity {
     }
   }
 
-
   /** Go to RegisterActivity */
   public void goToRegister(View view) {
     Intent intent = new Intent(this, RegisterActivity.class);

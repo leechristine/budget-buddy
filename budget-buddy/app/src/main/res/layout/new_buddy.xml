@@ -6,30 +6,128 @@
     android:layout_height="match_parent"
     tools:context=".NewBuddyActivity">
 
+    <Button
+        android:id="@+id/logout_button2"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="152dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button1"
+        android:onClick="logOut"
+        android:text="L O G   O U T"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toEndOf="@+id/buddy_button_light"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/track_button_dark"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/trackbtndark"
+        android:onClick="goToTracker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buddy_button_dark"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buddy_button_light"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/budbtnlight"
+        app:layout_constraintBaseline_toBaselineOf="@+id/track_button_dark"
+        app:layout_constraintEnd_toStartOf="@+id/logout_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_find_buddies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="250dp"
+        android:text="Find a buddy"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/wave_top2"
+        android:layout_width="553dp"
+        android:layout_height="231dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/wavy" />
+
+    <ImageView
+        android:id="@+id/wave_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="#75A876"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.561"
+        app:srcCompat="@drawable/wavy2" />
+
+    <TextView
+        android:id="@+id/text_buddies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="40dp"
+        android:text="Buddies"
+        android:textColor="@color/colorWhite"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/buddy_field"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
+        android:layout_width="254dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="5dp"
         android:hint="Username of Buddy"
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="166dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_find_buddies" />
 
     <Button
         android:id="@+id/search_button"
         style="@android:style/Widget.DeviceDefault.Button.Borderless"
-        android:layout_width="190dp"
+        android:layout_width="135dp"
         android:layout_height="55dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="42dp"
         android:background="@drawable/button1"
         android:fontFamily="sans-serif-medium"
-        android:onClick="login"
+        android:onClick="search"
         android:text="S E A R C H"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/colorWhite"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="293dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buddy_field" />
 
     <TextView
         android:id="@+id/buddy_status"
@@ -39,6 +137,18 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_buddies_info"
+        android:layout_width="287dp"
+        android:layout_height="36dp"
+        android:text="Stay motivated to reach your savings goal with a friend to keep you on track."
+        android:textAlignment="textStart"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_buddies" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

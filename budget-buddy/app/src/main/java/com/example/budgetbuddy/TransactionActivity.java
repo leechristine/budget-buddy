@@ -65,19 +65,18 @@ public class TransactionActivity extends AppCompatActivity
 
     String updTransactionHistory =
         transactionHistory
-            + "|"
             + month
             + "/"
             + day
             + "/"
             + year
-            + ", "
+            + ": $"
             + cost
             + ", "
             + category
             + ", "
             + description
-            + "/n";
+            + "\n";
     userData.set(7, updTransactionHistory);
     LoginActivity.accounts.put(username, userData);
 
