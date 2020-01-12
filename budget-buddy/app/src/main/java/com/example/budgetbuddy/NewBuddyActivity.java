@@ -15,13 +15,14 @@ public class NewBuddyActivity extends AppCompatActivity
     super.onCreate(savedInstanceState);
     setContentView(R.layout.transaction);
 
-
+    EditText buddyText = (EditText) findViewById(R.id.buddy_field);
+    String buddyUserName = buddyText.getText().toString();
 
     TextView addBuddy = (TextView) findViewById(R.id.buddy_status);
-    if (LoginActivity.accounts.get(buddy)!= null){
-      addBuddy.setText("You are now " + )
+    if (LoginActivity.accounts.get(buddyUserName)!= null){
+      addBuddy.setText("You are now " + buddyUserName + "'s Buddy!" )
     } else {
-      return false;
+      addBuddy.setText("Buddy not found! Please enter a new username.")
     }
   }
 
