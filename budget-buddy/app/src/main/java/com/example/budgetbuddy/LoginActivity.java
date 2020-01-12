@@ -39,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
 
     if (loginSuccess) {
       Intent intent = new Intent(this, MainActivity.class);
+      intent.putExtra("username", username);
       startActivity(intent);
     }
   }

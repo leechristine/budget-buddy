@@ -7,7 +7,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 public class TransactionActivity extends AppCompatActivity
     implements AdapterView.OnItemSelectedListener {
 
@@ -32,4 +31,8 @@ public class TransactionActivity extends AppCompatActivity
 
   @Override
   public void onNothingSelected(AdapterView<?> parent) {}
+
+  public String transactionHistory() {
+    ArrayList<String> userData = accoun
+  }
 }
