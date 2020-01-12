@@ -1,54 +1,53 @@
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewAccount">
+    tools:context=".RegisterActivity">
+
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <EditText
             android:id="@+id/name_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
             android:layout_marginBottom="16dp"
+            android:hint="Name"
             android:inputType="textMultiLine" />
 
         <EditText
             android:id="@+id/password_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
             android:layout_marginBottom="16dp"
+            android:hint="Password"
             android:inputType="textMultiLine" />
 
         <EditText
             android:id="@+id/budget_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Monthly Budget"
             android:layout_marginBottom="16dp"
+            android:hint="Monthly Budget"
             android:inputType="textMultiLine" />
 
         <EditText
             android:id="@+id/goal_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Budgeting Goal"
             android:layout_marginBottom="16dp"
-            android:inputType="textMultiLine"/>
+            android:hint="Budgeting Goal"
+            android:inputType="textMultiLine" />
 
         <Button
             android:id="@+id/create_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CREATE ACCOUNT"
-            android:onClick="createAccount"/>
+            android:onClick="createAccount"
+            android:text="CREATE ACCOUNT" />
 
 
     </LinearLayout>
