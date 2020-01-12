@@ -4,97 +4,177 @@
     android:id="@+id/scrollView2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     tools:context=".RegisterActivity">
 
 
+    <TextView
+        android:id="@+id/text_budgeting4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="260dp"
+        android:text="in order to"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/goal_date_field"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_budgeting2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:text="by"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/goal_amount_field"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <EditText
         android:id="@+id/username_field"
-        android:layout_width="379dp"
+        android:layout_width="310dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="20dp"
         android:hint="Username"
         android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/name_field"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="145dp" />
+        app:layout_constraintTop_toBottomOf="@+id/text_details" />
 
     <EditText
         android:id="@+id/goal_amount_field"
-        android:layout_width="379dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:hint="Budgeting Goal"
+        android:hint="#"
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="396dp" />
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_budgeting1"
+        tools:layout_editor_absoluteX="173dp" />
 
     <EditText
         android:id="@+id/budget_field"
-        android:layout_width="379dp"
+        android:layout_width="310dp"
         android:layout_height="wrap_content"
-        android:hint="Monthly Budget"
+        android:layout_marginStart="40dp"
+        android:hint="Bi-Weekly Budget"
         android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="335dp" />
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/goal_amount_field"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_field" />
 
     <EditText
         android:id="@+id/name_field"
-        android:layout_width="379dp"
+        android:layout_width="310dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="20dp"
         android:hint="Name"
         android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/password_field"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="211dp" />
+        app:layout_constraintTop_toBottomOf="@+id/username_field" />
 
     <EditText
         android:id="@+id/password_field"
-        android:layout_width="379dp"
+        android:layout_width="310dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="20dp"
         android:hint="Password"
         android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/budget_field"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="274dp" />
+        app:layout_constraintTop_toBottomOf="@+id/name_field" />
 
     <EditText
         android:id="@+id/goal_purpose_field"
-        android:layout_width="379dp"
+        android:layout_width="310dp"
         android:layout_height="wrap_content"
-        android:hint="Budgeting Goal"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:hint="  Enter a reason"
         android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="526dp" />
+        app:layout_constraintTop_toBottomOf="@+id/goal_date_field" />
 
     <EditText
         android:id="@+id/goal_date_field"
-        android:layout_width="379dp"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:hint="Budgeting Goal"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:hint="MM/DD/YYYY"
         android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="463dp" />
+        app:layout_constraintTop_toBottomOf="@+id/text_budgeting1" />
 
     <Button
         android:id="@+id/create_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="183dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/button1"
+        android:fontFamily="sans-serif-medium"
         android:onClick="createAccount"
-        android:text="CREATE ACCOUNT"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="640dp" />
+        android:text="C R E A T E"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goal_purpose_field" />
 
     <TextView
         android:id="@+id/text_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif"
         android:text="Profile"
-        android:textSize="50sp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="44dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="37dp" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="You can change these details later."
+        android:textColor="@android:color/darker_gray"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_profile" />
+
+    <TextView
+        android:id="@+id/text_budgeting1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="35dp"
+        android:text="I want to save $"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/budget_field" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
