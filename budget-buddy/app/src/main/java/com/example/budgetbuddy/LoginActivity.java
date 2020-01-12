@@ -44,12 +44,6 @@ public class LoginActivity extends AppCompatActivity {
     }
   }
 
-  public void createAccount(View view) {
-    RegisterActivity newAcc = new RegisterActivity();
-    // Button
-    // newAcc.onCreate();
-
-  }
 
   /** Go to RegisterActivity */
   public void goToRegister(View view) {

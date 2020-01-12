@@ -61,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
     newAccount.add(goalPurpose);
 
     // spending history: index 7
-    newAccount.add("0");
+    newAccount.add("");
 
     // adding the user date to a dictionary where the key is the username and the value is the
     // arraylist made up of its data

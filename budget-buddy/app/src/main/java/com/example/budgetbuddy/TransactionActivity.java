@@ -10,8 +10,12 @@ import androidx.appcompat.app.AppCompatActivity;
 public class TransactionActivity extends AppCompatActivity
     implements AdapterView.OnItemSelectedListener {
 
+  String username = null;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
+    Intent intent = getIntent();
+    username = intent.getStringExtra("username");
     super.onCreate(savedInstanceState);
     setContentView(R.layout.transaction);
 
@@ -26,13 +30,38 @@ public class TransactionActivity extends AppCompatActivity
 
   @Override
   public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-    String text = parent.getItemAtPosition(position).toString();
+    String category = parent.getItemAtPosition(position).toString();
   }
 
   @Override
   public void onNothingSelected(AdapterView<?> parent) {}
 
-  public String transactionHistory() {
-    ArrayList<String> userData = accoun
+  public String newTransactionHistory(View view) {
+    ArrayList<String> userData = accounts.get(username);
+    String transactionHistory = userData.get(7);
+
+    EditText monthText = (EditText) findViewById(R.id.month_field);
+    String month = monthText.getText().toString();
+
+    EditText dayText = (EditText) findViewById(R.id.day_field);
+    String day = dayText.getText().toString();
+
+    EditText yearText = (EditText) findViewById(R.id.year_field);
+    String year = yearText.getText().toString();
+
+    EditText costText = (EditText) findViewById(R.id.cost_field);
+    String cost = costText.getText().toString();
+
+    Spinner categories = (Spinner) findViewById(R.id.category_options);
+    String category = categories.getSelectedItem().toString();
+
+    EditText descriptionText = (EditText) findViewById(R.id.description_field);
+    String description = descriptionText.getText().toString();
+
+
+    updTransactionHistory = transactionHistory + "|" + month + "/" + day + "/" + year + "/" + ":" + cost + ":" +category + ":" + description;
+    userData.set(7, updTransactionHistory);
+    accounts.replace(username, userData);
+
   }
 }
