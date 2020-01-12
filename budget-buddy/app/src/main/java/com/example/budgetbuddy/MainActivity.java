@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
         String username = intent.getStringExtra("username");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView transactionHistory = (TextView) findViewById(R.id.transaction_history);
+        transactionHistory.setText(currentTransactionHistory());
     }
 
 
@@ -37,5 +40,7 @@ public class MainActivity extends AppCompatActivity {
             }
             history = sb.append("/n");
         }
+
+        return history;
     }
 }
