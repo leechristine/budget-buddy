@@ -17,7 +17,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView transactionHistory = (TextView) findViewById(R.id.transaction_history);
-        transactionHistory.setText(currentTransactionHistory());
+        ArrayList<String> userData = LoginActivity.accounts.get(username);
+        String transactionHistory = userData.get(7);
+        String[] userDataArray = transactionHistory.split("|");
+        transactionHistory.setText(currentTransactionHistory(userDataArray));
     }
 
 
@@ -27,10 +30,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public String currentTransactionHistory() {
-        ArrayList<String> userData = accounts.get(username);
-        String transactionHistory = userData.get(7);
-        String[] userDataArray = transactionHistory.split("|");
+    public String currentTransactionHistory(String[] userDataArray) {
         String history;
         for (int i=0; i<userDataArray.length(); i++){
             String[] transactionDataArray = userDataArray[i].split(":");
