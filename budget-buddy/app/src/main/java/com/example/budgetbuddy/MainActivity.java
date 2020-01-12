@@ -1,8 +1,9 @@
 package com.example.budgetbuddy;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +38,4 @@ public class MainActivity extends AppCompatActivity {
             history = sb.append("/n");
         }
     }
-
-
 }
