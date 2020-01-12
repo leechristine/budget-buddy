@@ -1,12 +1,17 @@
 package com.example.budgetbuddy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
+
 public class TransactionActivity extends AppCompatActivity
     implements AdapterView.OnItemSelectedListener {
 
@@ -36,8 +41,8 @@ public class TransactionActivity extends AppCompatActivity
   @Override
   public void onNothingSelected(AdapterView<?> parent) {}
 
-  public String newTransactionHistory(View view) {
-    ArrayList<String> userData = accounts.get(username);
+  public void newTransactionHistory(View view) {
+    ArrayList<String> userData = LoginActivity.accounts.get(username);
     String transactionHistory = userData.get(7);
 
     EditText monthText = (EditText) findViewById(R.id.month_field);
@@ -58,10 +63,26 @@ public class TransactionActivity extends AppCompatActivity
     EditText descriptionText = (EditText) findViewById(R.id.description_field);
     String description = descriptionText.getText().toString();
 
-
-    updTransactionHistory = transactionHistory + "|" + month + "/" + day + "/" + year + ", " + ":" + cost + ", :" +category + ", :" + description;
+    String updTransactionHistory =
+        transactionHistory
+            + "|"
+            + month
+            + "/"
+            + day
+            + "/"
+            + year
+            + ", "
+            + cost
+            + ", "
+            + category
+            + ", "
+            + description
+            + "/n";
     userData.set(7, updTransactionHistory);
-    accounts.replace(username, userData);
+    LoginActivity.accounts.put(username, userData);
 
+    Intent intent = new Intent(this, MainActivity.class);
+    intent.putExtra("username", username);
+    startActivity(intent);
   }
 }

@@ -24,13 +24,13 @@
         android:id="@+id/text_budgeting2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
+        android:layout_marginStart="30dp"
         android:text="by"
         android:textColor="@color/colorPrimary"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/goal_amount_field"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/goal_amount_field" />
 
     <EditText
         android:id="@+id/username_field"
@@ -49,12 +49,13 @@
         android:id="@+id/goal_amount_field"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
         android:hint="#"
         android:inputType="textMultiLine"
         android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_budgeting1"
-        tools:layout_editor_absoluteX="173dp" />
+        app:layout_constraintStart_toEndOf="@+id/text_budgeting1" />
 
     <EditText
         android:id="@+id/budget_field"
@@ -173,6 +174,7 @@
         android:textColor="@color/colorPrimary"
         android:textSize="15sp"
         android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/goal_amount_field"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/budget_field" />
 
