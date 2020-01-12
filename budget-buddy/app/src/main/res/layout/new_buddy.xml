@@ -10,18 +10,16 @@
         android:id="@+id/buddy_field"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:hint="Username of Buddy"
         android:inputType="textMultiLine"
-        app:layout_constraintBaseline_toBaselineOf="@+id/day_field"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="166dp" />
 
     <Button
         android:id="@+id/search_button"
         style="@android:style/Widget.DeviceDefault.Button.Borderless"
         android:layout_width="190dp"
         android:layout_height="55dp"
-        android:layout_marginTop="20dp"
         android:background="@drawable/button1"
         android:fontFamily="sans-serif-medium"
         android:onClick="login"
@@ -29,7 +27,9 @@
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@color/colorWhite"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="293dp" />
 
     <TextView
         android:id="@+id/buddy_status"
